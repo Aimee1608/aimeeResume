@@ -68,6 +68,15 @@ a{
 }
 html, body { position: relative;color:#333;background: #EBEBEB}
 
+@acolor:#df2050;
+
+a{
+  color:@acolor;
+}
+a:hover{
+  color:@acolor;
+  text-decoration: underline;
+}
 /****************************ÕýÎÄ*****************************/
 .container{
   width: 80%;
@@ -164,12 +173,6 @@ html, body { position: relative;color:#333;background: #EBEBEB}
         color:#ABADB0;
         font-weight: bold;
       }
-      a{
-        color: #fff;
-      }
-      a:hover{
-        color: #866C26;
-      }
 
     }
   }
@@ -193,8 +196,9 @@ html, body { position: relative;color:#333;background: #EBEBEB}
     background-color: #DFB651;
   }
   .aboutme{
-    padding: 60px 20px 0 40px;
+    padding: 60px 20px 0 20px;
     color: #eee;
+    line-height: 1.5;
     text-indent: 2em;
   }
 }
@@ -224,10 +228,6 @@ html, body { position: relative;color:#333;background: #EBEBEB}
     a{
       vertical-align: middle;
     }
-    a:hover{
-      color: #00A1D6;
-      text-decoration: underline;
-    }
   }
 
   .itemList{
@@ -242,6 +242,21 @@ html, body { position: relative;color:#333;background: #EBEBEB}
         color: #616161;
         line-height: 23px;
         margin-bottom: 5px;
+        img{
+          max-width:100%;
+          max-height: 200px;
+          object-fit: cover;
+          vertical-align: middle;
+          cursor: -webkit-zoom-in;
+          cursor: zoom-in;
+        }
+        .smallImg{
+          width: 100px;
+          height: 100px;
+        }
+        .bigImg{
+          //width:
+        }
       }
 
     }
@@ -263,13 +278,35 @@ html, body { position: relative;color:#333;background: #EBEBEB}
     font-size: 18px;
     bottom: 3px;
     font-weight: bold;
-    a{
-      //color: #00A1D6;
-    }
-    a:hover{
-      color: #00A1D6;
-      text-decoration: underline;
-    }
+  }
+}
+
+.footer{
+  text-align: center;
+  padding: 20px 0;
+  .fa-heart{
+    color: #df2050;
+  }
+}
+.review{
+  width: 100vw;
+  height:100vh;
+  position: fixed;
+  left:0;
+  top:0;
+  background: #fff;
+  text-align: center;
+  display: none;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+  img{
+    max-width: 70%;
+    max-height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
   }
 }
 

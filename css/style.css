@@ -162,6 +162,13 @@ body {
   color: #333;
   background: #EBEBEB;
 }
+a {
+  color: #df2050;
+}
+a:hover {
+  color: #df2050;
+  text-decoration: underline;
+}
 /****************************����*****************************/
 .container {
   width: 80%;
@@ -259,12 +266,6 @@ body {
   color: #ABADB0;
   font-weight: bold;
 }
-.leftBox ul li a {
-  color: #fff;
-}
-.leftBox ul li a:hover {
-  color: #866C26;
-}
 .leftBox p {
   padding-left: 50px;
   color: #eee;
@@ -285,8 +286,9 @@ body {
   background-color: #DFB651;
 }
 .leftBox .aboutme {
-  padding: 60px 20px 0 40px;
+  padding: 60px 20px 0 20px;
   color: #eee;
+  line-height: 1.5;
   text-indent: 2em;
 }
 .rightBox {
@@ -317,10 +319,6 @@ body {
 .rightBox h4 a {
   vertical-align: middle;
 }
-.rightBox h4 a:hover {
-  color: #00A1D6;
-  text-decoration: underline;
-}
 .rightBox .itemList {
   border-left: 2px solid #394A5A;
   margin-left: 15px;
@@ -335,6 +333,18 @@ body {
   color: #616161;
   line-height: 23px;
   margin-bottom: 5px;
+}
+.rightBox .itemList li p img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  vertical-align: middle;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+.rightBox .itemList li p .smallImg {
+  width: 100px;
+  height: 100px;
 }
 .rightBox .circle {
   height: 14px;
@@ -353,9 +363,33 @@ body {
   bottom: 3px;
   font-weight: bold;
 }
-.rightBox h5 a:hover {
-  color: #00A1D6;
-  text-decoration: underline;
+.footer {
+  text-align: center;
+  padding: 20px 0;
+}
+.footer .fa-heart {
+  color: #df2050;
+}
+.review {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  text-align: center;
+  display: none;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+.review img {
+  max-width: 70%;
+  max-height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 @media screen and (min-width: 961px) {
   .container {
