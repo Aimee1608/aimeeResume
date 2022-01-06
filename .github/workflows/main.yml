@@ -14,7 +14,7 @@ jobs:
     # 打包构建
     - name: Build
       uses: actions/setup-node@master
-    - run: tar -zcvf release.tgz ./
+    - run: tar -zcvf release.tgz css img js source index.html
    # 发布 Release
     - name: Create Release
       id: create_release
