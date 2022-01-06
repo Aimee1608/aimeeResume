@@ -332,22 +332,42 @@
         Made with <i class="fa fa-fw fa-heart"></i> by <a href="http://mangoya.cn" target="_blank">Aimee</a>. <a
             href="source/aimeeResume.docx" target="_blank">world 下载</a>.最后更新于2021年9月15日
     </div>
-    <div class="review">
-        <img src="" alt="" />
+    <div class="review" id="review">
+        <img src="" id="review-img" alt="" />
     </div>
 </body>
-<script src="js/jquery-3.2.1.min.js"></script>
 <script>
-    $(function () {
-        $('.itemList li img').on('click', function () {
-            var url = $(this).attr('src');
-            $('.review img').attr('src', url);
-            $('.review').fadeIn(500);
-        });
-        $('.review').click(function () {
-            $('.review').fadeOut(500);
+    // $(function () {
+    //     $('.itemList li img').on('click', function () {
+    //         var url = $(this).attr('src');
+    //         $('.review img').attr('src', url);
+    //         $('.review').fadeIn(500);
+    //     });
+    //     $('.review').click(function () {
+    //         $('.review').fadeOut(500);
+    //     })
+    // })
+    (function () {
+        const box = document.getElementsByClassName('rightBox')[0]
+        const review = document.getElementById('review')
+        const img = document.getElementById('review-img');
+
+        box.addEventListener('click', function (e) {
+            const target = e.target
+            if (e.target.nodeName === 'IMG') {
+                const src = e.target.src;
+                console.log(src)
+                img.src = src;
+                review.style.display = 'block';
+            }
+            console.log(e);
+
+
         })
-    })
+        review.addEventListener('click', function (e) {
+            review.style.display = 'none';
+        })
+    })()
 </script>
 
 </html>
